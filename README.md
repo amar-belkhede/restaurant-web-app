@@ -74,3 +74,6 @@ yarn start
 yarn add bootstrap
 yarn add reactstrap
 yarn add react-popper
+yarn add font-awesome
+yarn add bootstrap-social
+yarn add react-router-dom
