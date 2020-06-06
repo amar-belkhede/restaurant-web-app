@@ -69,3 +69,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 yarn global add create-react-app
 create-react-app confusion
+yarn start
+
+yarn add bootstrap
+yarn add reactstrap
+yarn add react-popper
