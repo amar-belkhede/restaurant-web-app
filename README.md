@@ -77,3 +77,5 @@ yarn add react-popper
 yarn add font-awesome
 yarn add bootstrap-social
 yarn add react-router-dom
+yarn add redux
+yarn add react-redux
