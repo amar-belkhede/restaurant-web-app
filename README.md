@@ -80,3 +80,5 @@ yarn add react-router-dom
 yarn add redux
 yarn add react-redux
 yarn add react-redux-form
+yarn add redux-thunk
+yarn add redux-logger

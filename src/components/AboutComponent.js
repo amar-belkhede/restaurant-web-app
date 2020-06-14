@@ -8,14 +8,34 @@ import {
     Media,
 } from "reactstrap";
 import { Link } from "react-router-dom";
+import { baseUrl } from "../shared/baseUrl";
+import { Loading } from "./LoadingComponent";
 
-function RenderLeader({ leaders }) {
-    if (leaders != null) {
+function RenderLeader({ leaders, isLoading, errMess }) {
+    if (isLoading) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    } else if (errMess) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <h4>{leaders.errMess}</h4>
+                    </div>
+                </div>
+            </div>
+        );
+    } else {
         const lead = leaders.map((l) => {
             return (
                 <Media className="pb-3">
                     <Media left>
-                        <Media object src={l.image} alt={l.name} />
+                        <Media object src={baseUrl + l.image} alt={l.name} />
                     </Media>
                     <Media body className="ml-5">
                         <Media heading>{l.name}</Media>
@@ -26,9 +46,11 @@ function RenderLeader({ leaders }) {
             );
         });
         return <div>{lead}</div>;
-    } else {
-        return <div></div>;
     }
+
+    // else {
+    //     return <div></div>;
+    // }
 }
 
 function About(props) {
@@ -115,7 +137,11 @@ function About(props) {
                 </div>
                 <div className="col-12">
                     {/* <Media list>{leaders}</Media> */}
-                    <RenderLeader leaders={props.leaders} />
+                    <RenderLeader
+                        leaders={props.leaders}
+                        isLoading={props.leaderLoading}
+                        errMess={props.leaderErrMess}
+                    />
                 </div>
             </div>
         </div>
