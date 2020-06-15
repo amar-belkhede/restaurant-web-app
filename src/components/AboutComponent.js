@@ -25,7 +25,7 @@ function RenderLeader({ leaders, isLoading, errMess }) {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <h4>{leaders.errMess}</h4>
+                        <h4>{errMess}</h4>
                     </div>
                 </div>
             </div>

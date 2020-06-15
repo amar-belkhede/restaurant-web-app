@@ -82,3 +82,8 @@ yarn add react-redux
 yarn add react-redux-form
 yarn add redux-thunk
 yarn add redux-logger
+
+npm install json-server -g
+json-server --watch db.json -p 3001 -d 2000
+
+yarn add cross-fetch
