@@ -87,3 +87,8 @@ npm install json-server -g
 json-server --watch db.json -p 3001 -d 2000
 
 yarn add cross-fetch
+yarn add react-transition-group@2.3.0
+yarn add react-animation-components@3.0.0
+yarn add prop-types@15.6.0
+yarn add react-animation-components
+yarn add prop-types
